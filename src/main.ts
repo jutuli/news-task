@@ -6,17 +6,19 @@ import { LanguageAbbr, SortCriteria } from "./types";
 const languageSelect =
   document.querySelector<HTMLSelectElement>("#select-language");
 const sortCriteriaSelect =
-  document.querySelector<HTMLSelectElement>("#sort-paramenters");
-const searchQuery =
-  document.querySelector<HTMLInputElement>("#search-text")?.value;
+  document.querySelector<HTMLSelectElement>("#sort-parameters");
+const searchQueryInput =
+  document.querySelector<HTMLInputElement>("#search-text");
 
 document
   .querySelector<HTMLButtonElement>("#btnSearch")
   ?.addEventListener("click", async (event) => {
     event.preventDefault();
-    if (!languageSelect || !sortCriteriaSelect || !searchQuery) return;
+    if (!languageSelect || !sortCriteriaSelect || !searchQueryInput) return;
     const language = languageSelect.value as unknown as LanguageAbbr;
     const sortCriteria = sortCriteriaSelect.value as unknown as SortCriteria;
+    const searchQuery = searchQueryInput.value;
     const news = await getSearchedNews(language, sortCriteria, searchQuery);
+    console.log(news);
     renderNewsCards(news);
   });
