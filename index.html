@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,6 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Task</title>
     <script type="module" src="/src/main.ts"></script>
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body></body>
+  <body class="bg-[#e1dfe5]">
+    <section
+      class="flex w-full flex-col items-center justify-center gap-20 border-red-800"
+    >
+      <h2
+        class="mt-20 text-center text-5xl font-bold tracking-[20px] text-[#152b6f]"
+      >
+        NEWS APP
+      </h2>
+      <!-- * Eingabemaske -->
+      <form
+        class="border-dark-50 flex w-[60vw] flex-col gap-6 rounded-2xl border-1 bg-[#f6e6cf] px-6 py-8"
+      >
+        <!-- * Suchbegriff -->
+        <article class="flex items-center justify-between">
+          <label for="search-text" class="text-lg text-black uppercase"
+            >Suchbegriff</label
+          >
+          <input
+            type="text"
+            id="search-text"
+            class="w-80 bg-white p-2 outline-none focus:bg-[#ffca7a]"
+          />
+        </article>
+        <!-- * Auswählen der Sprache -->
+        <article class="flex items-center justify-between">
+          <label for="select-language" class="text-lg text-black uppercase"
+            >Sprache</label
+          >
+          <select
+            id="select-language"
+            class="w-80 bg-white p-2 outline-none focus:bg-[#ffca7a]"
+          >
+            <option value="Deutsch">Deutsch</option>
+            <option value="Englisch">Englisch</option>
+            <option value="Französisch">Französisch</option>
+            <option value="Spanisch">Spanisch</option>
+          </select>
+        </article>
+
+        <!-- * Sortierung -->
+        <article class="flex items-center justify-between">
+          <label for="parameters" class="text-lg text-black uppercase"
+            >Sortierung</label
+          >
+          <select
+            id="sort-parameters"
+            class="w-80 bg-white p-2 outline-none focus:bg-[#ffca7a]"
+          >
+            <option value="Relevanz">Relevanz</option>
+            <option value="Popularität">Popularität</option>
+            <option value="Datum der Veröffentlichung">
+              Datum der Veröffentlichung
+            </option>
+          </select>
+        </article>
+      </form>
+    </section>
+  </body>
 </html>
