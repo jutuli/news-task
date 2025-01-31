@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -10,7 +10,7 @@
   </head>
   <body class="bg-[#e1dfe5]">
     <section
-      class="flex w-full flex-col items-center justify-center gap-20 border-red-800"
+      class="flex w-full flex-col items-center justify-center gap-10 border-red-800"
     >
       <h2
         class="mt-20 text-center text-5xl font-bold tracking-[20px] text-[#152b6f]"
@@ -19,7 +19,7 @@
       </h2>
       <!-- * Eingabemaske -->
       <form
-        class="border-dark-50 flex w-[60vw] flex-col gap-6 rounded-2xl border-1 bg-[#f6e6cf] px-6 py-8"
+        class="border-dark-50 flex w-[35rem] flex-col gap-6 rounded-2xl border-1 bg-[#f6e6cf] px-6 py-8 shadow-[0_0_20px_rgba(0,0,0,0.5)]"
       >
         <!-- * Suchbegriff -->
         <article class="flex items-center justify-between">
@@ -41,10 +41,10 @@
             id="select-language"
             class="w-80 bg-white p-2 outline-none focus:bg-[#ffca7a]"
           >
-            <option value="Deutsch">Deutsch</option>
-            <option value="Englisch">Englisch</option>
-            <option value="Französisch">Französisch</option>
-            <option value="Spanisch">Spanisch</option>
+            <option value="de">Deutsch</option>
+            <option value="en">Englisch</option>
+            <option value="fr">Französisch</option>
+            <option value="es">Spanisch</option>
           </select>
         </article>
 
@@ -57,14 +57,101 @@
             id="sort-parameters"
             class="w-80 bg-white p-2 outline-none focus:bg-[#ffca7a]"
           >
-            <option value="Relevanz">Relevanz</option>
-            <option value="Popularität">Popularität</option>
-            <option value="Datum der Veröffentlichung">
-              Datum der Veröffentlichung
-            </option>
+            <option value="relevancy">Relevanz</option>
+            <option value="popularity">Popularität</option>
+            <option value="publishedAt">Datum der Veröffentlichung</option>
           </select>
         </article>
+        <!-- * Suchen-Button -->
+        <button
+          type="submit"
+          id="btnSearch"
+          class="mx-auto inline-block w-2/5 cursor-pointer rounded-lg border-1 px-5 py-2 transition-colors duration-300 hover:bg-[#ffca7a] focus:bg-[#ffca7a]"
+        >
+          Suchen
+        </button>
       </form>
+
+      <article
+        id="news-container"
+        class="mx-auto mt-8 mb-24 grid w-full justify-center gap-6 p-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+      >
+        <div
+          id="news-box"
+          class="shadow-4xl ring-[#ffca7a]-400 flex flex-col overflow-hidden rounded-xl bg-[#f6e6cf] p-4 shadow-[0_0_20px_rgba(0,0,0,0.5)]"
+        >
+          <h2 class="my-6 text-center text-2xl font-bold">
+            News-Artikel-Überschrift zum einzelnen Artikel
+          </h2>
+          <!-- * Artikelpicture -->
+          <div
+            id="image-box"
+            class="image-box mx-auto mb-7 w-3/5 overflow-hidden rounded-2xl"
+          >
+            <img
+              class="object-cover"
+              src="./src/picture.jpg"
+              alt="Picture"
+              title="Picture"
+              aria-label="Picture"
+            />
+          </div>
+          <!-- * Artikeltext -->
+          <p class="text-dark-800 w-full text-center text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+            architecto tempore quidem! Maxime ratione, magnam distinctio ipsam
+            aliquam totam culpa dicta doloremque voluptatem sed obcaecati,
+            fugiat facere aut eos ut dolores harum, libero quos. Repellendus
+            quam nostrum alias, accusantium velit blanditiis aliquid! Esse
+            aspernatur reprehenderit laboriosam saepe?
+          </p>
+          <button
+            type="button"
+            id="btnToArticle"
+            class="mx-auto my-6 inline-block w-2/5 cursor-pointer rounded-lg border-1 px-5 py-2 transition-colors duration-300 hover:bg-[#ffca7a] focus:bg-[#ffca7a]"
+          >
+            Zum Artikel
+          </button>
+        </div>
+
+        <div
+          id="news-box"
+          class="shadow-4xl ring-[#ffca7a]-400 flex flex-col overflow-hidden rounded-xl bg-[#f6e6cf] p-4 shadow-[0_0_20px_rgba(0,0,0,0.5)]"
+        >
+          <h2 class="my-6 text-center text-2xl font-bold">
+            News-Artikel-Überschrift zum einzelnen Artikel
+          </h2>
+          <!-- * Artikelpicture -->
+          <div
+            id="image-box"
+            class="image-box mx-auto mb-7 w-3/5 overflow-hidden rounded-2xl"
+          >
+            <img
+              class="object-cover"
+              src="./src/picture.jpg"
+              alt="Picture"
+              title="Picture"
+              aria-label="Picture"
+            />
+          </div>
+          <!-- * Artikeltext -->
+          <p class="text-dark-800 w-full text-center text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+            architecto tempore quidem! Maxime ratione, magnam distinctio ipsam
+            aliquam totam culpa dicta doloremque voluptatem sed obcaecati,
+            fugiat facere aut eos ut dolores harum, libero quos. Repellendus
+            quam nostrum alias, accusantium velit blanditiis aliquid! Esse
+            aspernatur reprehenderit laboriosam saepe?
+          </p>
+          <button
+            type="button"
+            id="btnToArticle"
+            class="mx-auto my-6 inline-block w-2/5 cursor-pointer rounded-lg border-1 px-5 py-2 transition-colors duration-300 hover:bg-[#ffca7a] focus:bg-[#ffca7a]"
+          >
+            Zum Artikel
+          </button>
+        </div>
+      </article>
     </section>
   </body>
 </html>
