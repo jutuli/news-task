@@ -72,11 +72,11 @@
         </button>
       </form>
 
-      <article
+      <section
         id="news-container"
-        class="mx-auto mt-8 mb-24 grid w-full justify-center gap-6 p-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3"
+        class="mx-auto mt-8 mb-24 grid w-full justify-center gap-6 p-4 sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3"
       >
-        <div
+        <article
           id="news-box"
           class="shadow-4xl ring-[#ffca7a]-400 flex flex-col overflow-hidden rounded-xl bg-[#f6e6cf] p-4 shadow-[0_0_20px_rgba(0,0,0,0.5)]"
         >
@@ -112,9 +112,9 @@
           >
             Zum Artikel
           </button>
-        </div>
+        </article>
 
-        <div
+        <article
           id="news-box"
           class="shadow-4xl ring-[#ffca7a]-400 flex flex-col overflow-hidden rounded-xl bg-[#f6e6cf] p-4 shadow-[0_0_20px_rgba(0,0,0,0.5)]"
         >
@@ -150,8 +150,46 @@
           >
             Zum Artikel
           </button>
-        </div>
-      </article>
+        </article>
+
+        <article
+          id="news-box"
+          class="shadow-4xl ring-[#ffca7a]-400 flex flex-col overflow-hidden rounded-xl bg-[#f6e6cf] p-4 shadow-[0_0_20px_rgba(0,0,0,0.5)]"
+        >
+          <h2 class="my-6 text-center text-2xl font-bold">
+            News-Artikel-Überschrift zum einzelnen Artikel
+          </h2>
+          <!-- * Artikelpicture -->
+          <div
+            id="image-box"
+            class="image-box mx-auto mb-7 w-3/5 overflow-hidden rounded-2xl"
+          >
+            <img
+              class="object-cover"
+              src="./src/picture.jpg"
+              alt="Picture"
+              title="Picture"
+              aria-label="Picture"
+            />
+          </div>
+          <!-- * Artikeltext -->
+          <p class="text-dark-800 w-full text-center text-lg">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita
+            architecto tempore quidem! Maxime ratione, magnam distinctio ipsam
+            aliquam totam culpa dicta doloremque voluptatem sed obcaecati,
+            fugiat facere aut eos ut dolores harum, libero quos. Repellendus
+            quam nostrum alias, accusantium velit blanditiis aliquid! Esse
+            aspernatur reprehenderit laboriosam saepe?
+          </p>
+          <button
+            type="button"
+            id="btnToArticle"
+            class="mx-auto my-6 inline-block w-2/5 cursor-pointer rounded-lg border-1 px-5 py-2 transition-colors duration-300 hover:bg-[#ffca7a] focus:bg-[#ffca7a]"
+          >
+            Zum Artikel
+          </button>
+        </article>
+      </section>
     </section>
   </body>
 </html>
