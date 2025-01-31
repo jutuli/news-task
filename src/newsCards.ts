@@ -9,9 +9,8 @@ export async function renderNewsCards(news: Article[]) {
   news.forEach((entry) => {
     // Create News Card Element
     const newsCard = document.createElement("article");
-    newsCard.id = "news-box";
     newsCard.className =
-      "mx-auto mt-8 mb-24 grid w-full justify-center gap-6 p-4 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3";
+      "shadow-4xl ring-[#ffca7a]-400 flex flex-col overflow-hidden rounded-xl bg-[#f6e6cf] p-4 shadow-[0_0_20px_rgba(0,0,0,0.5)]";
     // Create News Card Title
     const newsCardTitle = document.createElement("h2");
     newsCardTitle.textContent = entry.title;
