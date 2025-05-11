@@ -33,7 +33,7 @@ export async function renderNewsCards(news: Article[]) {
     // Create News Card Button including EventListener
     const newsCardButton = document.createElement("button");
     newsCardButton.className =
-      "mx-auto my-6 inline-block w-2/5 cursor-pointer rounded-lg border-1 px-5 py-2 transition-colors duration-300 hover:bg-[#ffca7a] focus:bg-[#ffca7a]";
+      "mx-auto my-6 inline-block w-2/5 cursor-pointer rounded-lg border-1 px-5 py-2 transition-colors duration-300 hover:bg-[#ffca7a] focus:bg-[#ffca7a] mt-auto";
     newsCardButton.textContent = "Zum Artikel";
     newsCardButton.addEventListener("click", () => {
       window.open(entry.url);
